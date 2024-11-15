@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #333;
+    text-align: center;
+}
+
+.header {
+    background-color: #ffffff;
+    color: #131212;
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.footer {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.content {
+    padding: 5rem 1rem 3rem;
+    margin-top: 3rem;
+}
+
+.contact-options, .appointments, .orders-info, .faq {
+    margin: 2rem 0;
+}
+
+.contact-options h2, .appointments h2, .orders-info h2, .faq h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.contact-methods {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.contact-methods a,
+.appointment-link,
+.order-item a {
+    color: #333;  /* Default color */
+    text-decoration: none;  /* No underline initially */
+    position: relative;  /* To position the pseudo-element */
+    transition: color 0.3s ease;  /* Smooth transition for color */
+}
+
+.contact-methods a::after,
+.appointment-link::after,
+.order-item a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #0b0a0a;  /* Color of the underline */
+    transition: width 1s ease;  /* Smooth transition for underline */
+}
+
+.orders-grid .order-item img,
+.appointments img,
+.orders-info .order-item img {
+    max-width: 20%; /* Ensures image does not exceed container width */
+    height: 100px; /* Sets a fixed height for uniformity */
+    object-fit: cover; /* Ensures the image covers the container without stretching */
+    border-radius: 5px; /* Maintains consistent border-radius */
+}
+
+
+
+
+
+.contact-methods a:hover,
+.appointment-link:hover,
+.order-item a:hover {
+    color: #040404;
+}
+
+.contact-methods a:hover::after,
+.appointment-link:hover::after,
+.order-item a:hover::after {
+    width: 100%;  /* Underline expands from right to left on hover */
+}
+
+.contact-item {
+    width: 45%;
+    margin-bottom: 1rem;
+}
+
+.appointments img, .orders-info .order-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.orders-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.order-item {
+    width: 30%;
+    margin-bottom: 1rem;
+}
+
+.faq-item {
+    margin: 1rem 0;
+}
